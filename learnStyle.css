@@ -1,0 +1,137 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #ffffff 0%, #18a3e4 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+nav {
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+   
+}
+
+nav .logo img {
+    height: 100px; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-right: 140px;
+    text-align: center;
+    font-size: 30px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 100px;
+    padding-left: auto;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: rgb(105, 104, 0);
+}
+
+.flashcard-container {
+    text-align: center;
+    margin-top: 150px; 
+}
+
+.flashcard {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.flashcard div {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(0, 68, 255);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.39);
+    transition: transform 0.6s;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.front {
+    background: #ffffff;
+}
+
+.back {
+    background-color: rgb(56, 112, 0);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flashcard.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.flashcard.flipped .back {
+    transform: rotateY(360deg);
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(97, 189, 5);
+}
+.quiz-container {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+#quiz-result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    margin-top: 200px;
+}

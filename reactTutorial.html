@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width= device-width, initla-scale= 1.0">
+        <title>How to create a website</title>
+        <link rel = "stylesheet" href="htmlStyle.css">
+
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="logo.jpg" alt="logo">
+            </div>
+            <ul>
+                <li><a href = "Home.html">Home</a></li>
+                <li><a href="htmlTutorial.html">HTML & CSS Tutorial</a></li>
+                <li><a href="reactTutorial.html">React Tutorial</a></li>
+                <li><a href="LearnMore.html">Test Your Knowledge </a></li>
+            </ul>
+        </nav>
+    </body>
+
+
+    <div class="content">
+        <h2>React Tutorial</h2>
+        <p>React is a JavaScript library for building user interface.  It allows you to create resuable UI components that can manage their own state.</p>
+        <p>In the examples below you woll see some examples of a react components</p>
+
+        <h3>Basic React Component</h3>
+        <p> A react component is a resuable piece of the UI.  Components can be defined as functions or classes.  here is a simple example of a functional React Component: </p>
+        <pre>
+            <code>
+                &lt; script src="https://unpkg.com/react@17.0.2/umd/react.development.js"&gt;&lt; /script&gt;
+                &lt; script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"&gt;&lt; /script&gt;
+                &lt; script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"&gt;&lt; /script&gt;
+            </code>
+
+            &lt; script type="text/babel"&gt;
+            function Counter(){
+                const[count, setCount] =  React.useState(0);
+
+                return(
+                    &lt;div&gt;
+                        &lt;p&gt; You clicked {count} times &lt;/p&gt;
+                        &lt;button onClick = {() = &gt; setCount(count +1)}&gt;
+                        click me!
+                        &lt;button&gt;
+                    &lt;/div&gt;
+
+                );
+            }
+        </pre>
+            <p> the code above shows the react code where you can keep track of the number of times that the button has been cliced on</p>
+
+            <h3>Component with props</h3>
+            <p> Props a short from of properties are read-on;y attributes passed from a parent components to child components.  They allow you to pass data and event handlers to components
+                Here is an example of the props </p>
+                <pre>
+                <code>
+                    &lt; script src="https://unpkg.com/react@17.0.2/umd/react.development.js"&gt;&lt; /script&gt;
+                    &lt; script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"&gt;&lt; /script&gt;
+                    &lt; script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"&gt;&lt; /script&gt;
+                </code>
+                
+                &lt; script type = " text/babel"&gt;
+
+                function Greeting(props){
+                    return &lt;h1&gt; Hello {props.name}&lt;/h1&gt;
+                }
+                function App(){
+                    return(
+                        &lt;Greeting name="React" /&gt;
+                        &lt;Greeting name=World" /&gt;
+                    );
+                    &lt;/div&gt;
+                
+                }
+            </pre>
+                <p> In this example the Greeting component receive a 'name props and renders it inside an h1 tag.  The App cimponent renders 2 'Greeting' component with different 'name' props</p>
+
+        
+            
+      
+    </div>
+
+    <footer>
+        <p>Creator: Soroush Naeiji<br>Westfield High School<br>2023-2024 &copy;</p>
+    </footer>
